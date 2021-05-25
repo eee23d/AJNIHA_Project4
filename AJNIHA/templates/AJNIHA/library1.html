@@ -3,6 +3,38 @@
 {% block title %}أجنحة | مكتبتي {% endblock %}
 {% block content %}
 
+<!-- ======= Mobile nav toggle button ======= -->
+  <i class="bi bi-list mobile-nav-toggle d-xl-none"></i>
+
+  <!-- ======= Header ======= -->
+  <header id="header">
+    <div class="d-flex flex-column">
+      <div class="profile">
+
+        <img src="{{request.user.prof_pic.url}}" alt="" class=" rounded-circle">
+        <form method="post" enctype="multipart/form-data" ><a class="glyphicon glyphicon-camera text-center " type="submit">تغيير الصورة الشخصية</a> </form>
+
+
+
+        <h1 class="text-light"><a href="index.html">{{ request.user.first_name }}  {{ request.user.last_name }} </a></h1>
+      </div>
+    </div>
+      <nav id="navbar" class="nav-menu navbar">
+
+          <ul>
+          <li><a href="{% url 'userHome' %}" class="nav-link scrollto active"> <span> الصفحة الرئيسية </span><span style="color:#1f435f">d</span><i class="bx bx-home"></i></a></li>
+
+          <li><a href="{% url 'library' %}" class="nav-link scrollto"> <span style="color:#1f435f">dd</span> <span> مكتبتي </span><span style="color:#1f435f">d</span><i class="bx bx-server"></i></a></li>
+                          <li><a href="{% url 'search' %}" class="nav-link scrollto"><span style="color:#1f435f; font-size: small">ddd</span> <span> أضف كتاب </span><span style="color:#1f435f">d</span><i class="bx bx-book-add"></i> </a></li>
+
+          <li><a href="{% url 'notes' %}" class="nav-link scrollto"><span style="color:#1f435f; font-size: small">ddd</span> <span> مدوناتي </span><span style="color:#1f435f">d</span><i class="bx bx-file-blank"></i> </a></li>
+          <li><a href="#about" class="nav-link scrollto"><span style="color:#1f435f">d</span> <span> الاعدادات </span><span style="color:#1f435f">d</span><i class="bx bx-user"></i></a></li>
+          <li><a href="{% url 'contact' %}" class="nav-link scrollto"><span style="color:#1f435f;font-size: small">d</span> <span> تواصل معنا </span><span style="color:#1f435f">d</span><i class="bx bx-envelope"></i> </a></li>
+        </ul>
+      </nav><!-- .nav-menu -->
+    </div>
+  </header><!-- End Header -->
+<main id="main">
 
 <section id="portfolio" class="portfolio section-bg">
 {% for shelf in shelves %}
@@ -152,4 +184,20 @@
      <a href="{% url 'search' %}" style="margin: auto">   <button style="border-radius: 80%;margin: auto; background-color: rgba(104,142,200,0.72);">إضافة كتاب</button></a>
 
 </section><!-- End Section -->
+</main>
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong><span>iPortfolio</span></strong>
+      </div>
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/iportfolio-bootstrap-portfolio-websites-template/ -->
+        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+      </div>
+    </div>
+  </footer><!-- End  Footer -->
 {% endblock %}

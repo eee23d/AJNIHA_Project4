@@ -11,6 +11,8 @@
 body {
   font-family: "Open Sans", sans-serif;
   color: #272829;
+  background: url("../img/Webp.net-resizeimage(5).jpg") top left no-repeat;
+
 }
 
 a {
@@ -73,16 +75,14 @@ h1, h2, h3, h4, h5, h6 {
   z-index: 9997;
   transition: all 0.5s;
   padding: 0 15px;
-  background: #7a4c51;
-  overflow-y: auto;
+  background: #1f435f;  overflow-y: auto;
 }
 
 #header .profile img {
   margin: 15px auto;
   display: block;
   width: 120px;
-  border: 8px solid #341a1d;
-}
+  border: 8px solid #ffffff;}
 
 #header .profile h1 {
   font-size: 24px;
@@ -115,8 +115,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #header .profile .social-links a:hover {
-  background: #fbc8b3;
-  color: #fff;
+ background: #ffffff;
+color: #61fded;
   text-decoration: none;
 }
 
@@ -183,7 +183,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .nav-menu a:hover i, .nav-menu .active i, .nav-menu li:hover > a i {
-  color: #fbc8b3;
+  color: #5eb0f6;
 }
 
 .nav-menu a{
@@ -210,7 +210,7 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 24px;
   transition: all 0.4s;
   outline: none !important;
-  background-color: #fbc8b3;
+  background-color: #1f435f;
   color: #fff;
   width: 40px;
   height: 40px;
@@ -1158,7 +1158,7 @@ section {
   bottom: 0;
   width: 300px;
   z-index: 9999;
-  background: #7a4c51;
+  background: #1f435f;
 }
 
 #footer .copyright {
@@ -1383,27 +1383,14 @@ textarea:placeholder-shown + .form__label {
 
 /*   droplist */
 .dropbtn {
-  background-color: #4CAF50;
+background-color: #ffbe8a;
   color: white;
   padding: 16px;
   font-size: 16px;
   border: none;
   cursor: pointer;
   width: 150px;
-
-
-
-}
-.dropbtn1 {
-  background-color: #4CAF50;
-  color: white;
-  font-size: 16px;
-  border: none;
-  cursor: pointer;
-  width: 150px;
-  height:30px
-
-
+  border-radius: .8em;
 
 }
 
@@ -1436,7 +1423,53 @@ textarea:placeholder-shown + .form__label {
     }
 
     .dropdown:hover .dropbtn {
-        background-color: #3e8e41;
+        background-color: #f38425;
+
+    }
+
+    .dropbtn1 {
+  background-color: #ffbe8a;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  width: 150px;
+        border-radius: .8em;
+
+}
+
+
+
+    .dropdown1 {
+        position: relative;
+        display: inline-block;
+    }
+
+    .dropdown-content1 {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+    }
+
+    .dropdown-content1 a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+    }
+
+    .dropdown-content1 a:hover {background-color: #f1f1f1}
+
+    .dropdown1:hover .dropdown-content1 {
+        display: block;
+    }
+
+    .dropdown1:hover .dropbtn1 {
+        background-color: #f68a33;
 
     }
 
@@ -1471,7 +1504,7 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 .number-input {
-  border: 2px solid #ddd;
+
   display: inline-flex;
 }
 
@@ -1487,8 +1520,8 @@ input[type=number]::-webkit-outer-spin-button {
   border: none;
   align-items: center;
   justify-content: center;
-  width: 3rem;
-  height: 3rem;
+  width: 2rem;
+  height: 2rem;
   cursor: pointer;
   margin: 0;
   position: relative;
@@ -1511,11 +1544,9 @@ input[type=number]::-webkit-outer-spin-button {
 .number-input input[type=number] {
   font-family: sans-serif;
   max-width: 5rem;
-  padding: .5rem;
-  border: solid #ddd;
-  border-width: 0 2px;
+  border: solid #ddd 1px;
   font-size: 2rem;
-  height: 3rem;
+  height: 2rem;
   font-weight: bold;
   text-align: center;
 }
@@ -1621,3 +1652,30 @@ input[type=number]::-webkit-outer-spin-button {
 
     background-color: #0c4128;
 }
+
+
+	.radios .radio {
+	    background-color: #0b5ed7;
+
+	    border-radius: 50%;
+	  border-style: groove;
+	  margin-bottom: 10px;
+	    width: 20px;
+	    height: 20px;
+	     border-width: 4px;
+	  border-color: lavender;
+	    cursor: pointer;
+	}
+
+	.radios input[type=radio] {
+	    display: none;
+	}
+
+	.radios input[type=radio]:checked + .radio {
+	    border-style: inset;
+	    border-color: #0e2442;
+	     border-width: 4px;
+
+	    background-color: #0c4128;
+	}
+
