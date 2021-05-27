@@ -12,7 +12,11 @@ urlpatterns = [
     path('notes',views.notes,name='notes'),
     path('contact',views.contact,name='contact'),
     path('library',views.library,name='library'),
-    path('search',views.search,name='search')
+    path('search',views.search,name='search'),
+    path('test',views.test,name='test'),
+path('test2',views.test2,name='test2'),
+    path('stat',views.stat,name='stat'),
+
     #I add a comment here to try use commit why
 
 ]
